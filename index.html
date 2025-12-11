@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Living Nativity • [Your Church/Organization]</title>
+    <meta name="description" content="Join us for a Living Nativity—outdoor walkthrough with live actors, music, and refreshments. Family-friendly and free." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/nativity-styles.css" />
+    <link rel="icon" href="img/cropped-favicon-32x32.png" />
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero" aria-label="Living Nativity Hero">
+        <div class="container">
+            <div class="pill" aria-label="Event type">Free • Family-Friendly • Outdoors</div>
+            <h1>Our Savior Lutheran Church Living Nativity</h1>
+            <p class="subtitle">Walk through the story of the birth of Jesus with live actors, animal, wise men, townspeople, and more!</p>
+            <button class="cta" onclick="document.getElementById('details').scrollIntoView({behavior:'smooth'})" aria-label="View event details">
+                View Event Details
+                <span aria-hidden="true">→</span>
+            </button>
+            <div class="spacer"></div>
+
+            <!-- Quick info cards -->
+            <div id="details" class="grid cols-3" role="list" aria-label="Event quick details">
+                <article class="card" role="listitem">
+                    <h3>Dates & Times</h3>
+                    <ul class="list">
+                        <!-- Replace with actual dates -->
+                        <li><strong>Saturday, Dec 5 2026</strong> — 6:00–8:00 PM</li>
+                        <li><strong>Sunday, Dec 6 2026</strong> — 6:00–8:00 PM</li>
+                    </ul>
+                </article>
+                <article class="card" role="listitem">
+                    <h3>Location</h3>
+                    <p>
+                        <strong>Our Savior Luthern Church (Missouri Synod)</strong><br>
+                        1 Hager Park Road (Junction 140, 2, and 2A)<br />
+                        Westminster, MA 0147A
+                    </p>
+                    <p class="muted">Parking available onsite • Dress warmly</p>
+                </article>
+                <article class="card" role="listitem">
+                    <h3>Admission</h3>
+                    <p><span class="pill" aria-label="Admission status">Free Admission</span></p>
+                    <p><strong>It is our gift to the community </strong></p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section aria-label="Photo Gallery">
+        <div class="container">
+            <header>
+                <h2>Scenes from the Nativity</h2>
+                <p>Preview a few moments—from the shepherds and wise men to the manger with Joseph, Mary, and baby Jesus</p>
+            </header>
+
+            <div class="gallery" id="gallery" role="list">
+                <!-- Replace image sources and captions with your images -->
+                <!-- Tip: Place images under /img/ and use real alt text for accessibility -->
+                <figure role="listitem">
+                    <img src="img/nativity-1.jpg" alt="Mary and Joseph at the manger" data-caption="The Holy Family" />
+                    <figcaption>The Holy Family</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-2.jpg" alt="Shepherds gathered under the night sky" data-caption="Shepherds Keeping Watch" />
+                    <figcaption>Shepherds with Live Animals</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-3.jpg" alt="The Magi bringing gifts" data-caption="The Magi" />
+                    <figcaption>Mean old Roman</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-4.jpg" alt="Angels announcing good news" data-caption="Angels Proclaim" />
+                    <figcaption>Scene from the Bakery</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-5.jpg" alt="Outdoor choir singing carols" data-caption="Caroling Together" />
+                    <figcaption>Marketplace Scene</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-6.jpg" alt="Warm beverage table with volunteers" data-caption="Hot Cocoa & Warmth" />
+                    <figcaption>Scene from the Tannery</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-7.jpg" alt="Children visiting the stable scene" data-caption="Children at the Stable" />
+                    <figcaption>Visitors</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-8.jpg" alt="Donkey near the stable" data-caption="Live Animals" />
+                    <figcaption>Some Pots</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-9.jpg" alt="Candlelit pathway" data-caption="Candlelit Path" />
+                    <figcaption>The Census Taker</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <img src="img/nativity-10.jpg" alt="Star above the stable" data-caption="The Guiding Star" />
+                    <figcaption>Tommy!</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="modal" id="modal" aria-hidden="true" aria-label="Image lightbox">
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <header>
+                    <h4 id="modal-title">Caption</h4>
+                    <div>
+                        <button id="prevBtn" aria-label="Previous image">◀ Prev</button>
+                        <button id="nextBtn" aria-label="Next image">Next ▶</button>
+                        <button id="closeBtn" aria-label="Close">Close ✕</button>
+                    </div>
+                </header>
+                <img id="modalImg" src="" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+    <section aria-label="Event Schedule">
+        <div class="container">
+            <header>
+                <h2>Schedule</h2>
+                <p>Arrive anytime—walkthrough scenes loop continuously. Average visit 30–45 minutes.</p>
+            </header>
+            <div class="grid">
+                <article class="card">
+                    <div class="timeline">
+                        <div class="item">
+                            <strong>6:00 PM</strong> — Grounds open, refreshments available
+                        </div>
+                        <div class="item">
+                            <strong>8:00 PM</strong> — Final walkthrough with Doxology
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Good to Know</h3>
+                    <ul class="list">
+                        <li>Dress warmly; event is outdoors.</li>
+                        <li>Friendly animals present (no petting in certain areas).</li>
+                        <li>Accessibility: Handicap lot available. Flat paths with compacted surface.</li>
+                        <li>Restrooms available just outside the main church doors</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map -->
+    <section aria-label="Location">
+        <div class="container">
+            <header>
+                <h2>Find Us</h2>
+                <p>Our Savior Luthern Church</p>
+            </header>
+            <div class="grid">
+                <article class="card">
+                    <h3>Directions</h3>
+                    <p>
+                        1 Hager Park Road (Junction 140, 2, and 2A) <br />
+                        Westminster, MA 01473 <br />
+                        Look for the police and the parking attendents
+                    </p>
+                    <p>
+                        <a class="btn-outline" href="https://www.google.com/maps?q=11%20Hager%20Park%20Rd%20Westminster%20MA&output=embed" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                    </p>
+                </article>
+                <article class="card" aria-label="Map">
+                    <!-- Replace the src with your exact address or coordinates -->
+                    <iframe title="Map to Living Nativity"
+                            src="https://www.google.com/maps?q=11%20Hager%20Park%20Rd%20Westminster%20MA&output=embed"
+                            width="100%"
+                            height="300"
+                            style="border:0; border-radius:12px;"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessibility & FAQ -->
+    <section aria-label="Accessibility & FAQ">
+        <div class="container">
+            <header>
+                <h2>Accessibility & FAQ</h2>
+                <p>We aim to make this event welcoming for everyone.</p>
+            </header>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Accessibility</h3>
+                    <ul class="list">
+                        <li>Step-free routes with flat, compacted surfaces.</li>
+                        <li>Accessible parking near the entrance.</li>
+                        <li>Service animals welcome.</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>FAQ</h3>
+                    <ul class="list">
+                        <li><strong>Is it free? Yes!</strong>
+                        <li><strong>Weather?</strong> Light rain/snow: event continues. Severe weather: check our Facebook.</li>
+                        <li><strong>Photos?</strong> Personal photos welcome; please be respectful of actors.</li>
+                        <li><strong>Groups?</strong> Large groups please email <a href="mailto:office@oursaviorlcms.com ">office@oursaviorlcms.com </a>.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <strong>Our Savior Luthern Church</strong><br />
+                1 Hager Park Road (Junction 140, 2, and 2A)
+                Westminster, MA 01473
+                <a href="mailto:office@oursaviorlcms.com ">office@oursaviorlcms.com </a>
+                <p class="muted">© <span id="year"></span> Living Nativity. All rights reserved.</p>
+            </div>
+            <div>
+                <h3 style="margin-top:0;">Connect</h3>
+                <p>
+                    <a href="#" aria-label="Facebook">Facebook</a> •
+                    <a href="#" aria-label="Instagram">Instagram</a> •
+                    <a href="#" aria-label="Email">Email</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lightbox logic
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modal-title');
+        const closeBtn = document.getElementById('closeBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const figures = Array.from(document.querySelectorAll('.gallery figure'));
+        let currentIndex = -1;
+
+        function openModal(index) {
+            const img = figures[index].querySelector('img');
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalTitle.textContent = img.dataset.caption || img.alt || 'Photo';
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+            currentIndex = index;
+            // Trap focus to the close button for accessibility
+            closeBtn.focus();
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+        function nextImage() {
+            if (currentIndex === -1) return;
+            currentIndex = (currentIndex + 1) % figures.length;
+            openModal(currentIndex);
+        }
+        function prevImage() {
+            if (currentIndex === -1) return;
+            currentIndex = (currentIndex - 1 + figures.length) % figures.length;
+            openModal(currentIndex);
+        }
+        figures.forEach((fig, idx) => {
+            fig.addEventListener('click', () => openModal(idx));
+            fig.addEventListener('keypress', (e) => { if (e.key === 'Enter') openModal(idx); });
+            fig.setAttribute('tabindex', '0');
+            fig.setAttribute('role', 'button');
+            fig.setAttribute('aria-label', fig.querySelector('img').alt);
+        });
+        closeBtn.addEventListener('click', closeModal);
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('open')) return;
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+    </script>
+</body>
+</html>
